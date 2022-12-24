@@ -55,6 +55,12 @@ object AnalysisTest {
     )
   }
 
+  def updateFail: Update[(String, Int)] = {
+    Update[(String, Int)](
+      "UPDATE COUNTRY SET NAME = ? WHERE CODE = ?"
+    )
+  }
+
   def update0_1(name: String, code: String): Update0 =
     sql"""
       UPDATE COUNTRY SET NAME = $name WHERE CODE = $code
