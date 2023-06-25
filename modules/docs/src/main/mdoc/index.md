@@ -7,7 +7,7 @@
 
 # doobie
 
-<img align="right" src="https://cdn.rawgit.com/tpolecat/doobie/series/0.5.x/doobie_logo.svg" height="150px" style="padding-left: 20px"/>
+<img align="right" src="https://cdn.rawgit.com/tpolecat/doobie/main/doobie_logo.svg" height="150px" style="padding-left: 20px"/>
 
 [![Travis CI](https://travis-ci.org/tpolecat/doobie.svg?branch=series%2F0.5.x)](https://travis-ci.org/tpolecat/doobie)
 [![Join the chat at https://gitter.im/tpolecat/doobie](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/tpolecat/doobie?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -26,7 +26,11 @@ import scala.concurrent.ExecutionContext
 import cats.effect.unsafe.implicits.global
 
 val xa = Transactor.fromDriverManager[IO](
-  driver = "org.postgresql.Driver", url = "jdbc:postgresql:world", user = "postgres", password = "password", logHandler = None
+  driver = "org.postgresql.Driver",
+  url = "jdbc:postgresql:world",
+  user = "postgres",
+  password = "password",
+  logHandler = None
 )
 
 case class Country(code: String, name: String, population: Long)
@@ -119,7 +123,6 @@ sbt:docs> makeSite
 sbt:doce> ghpagesPushSite
 ```
 
-
 ## Adopters
 
 Here's a (non-exhaustive) list of companies that use doobie in production.
@@ -140,7 +143,7 @@ Don't see yours? [You can add it in a PR!](https://github.com/tpolecat/doobie/ed
  - [NOIRLab](https://noirlab.edu)
  - [On Air Entertainment](https://onairentertainment.com/)
  - [RaiffeisenBank Russia](https://raiffeisen.ru)
- - [ReachFive](www.reachfive.com)
+ - [ReachFive](https://www.reachfive.com)
  - [Rudder](https://rudder.io)
  - [SecurityScorecard](https://securityscorecard.io)
  - [SoftwareMill](https://softwaremill.com)
